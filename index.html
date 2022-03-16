@@ -69,48 +69,36 @@ function eraser() {
 	
 <!-- This function will be used to clear the canvas and reset the width --> 
 	
-
-	
-	
-	
-	
-	
-	
 </script>
 
-
-
 <style>	
-.body {
-     margin: 0em;
-}
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 0;
-    background-color: hsl(0,0%,100%);
-}
-  .page:target {
-    left: 0vw;
-    z-index: 1;
-}
-</style>
-
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Content goes here.</p>
 		
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+<div> 
+
+<canvas id="x" width="205" height="105" style="border:5px solid #000000;"></canvas>
+
+<div id="content" class="w3-container"> 
+        <button class"w3-button w3-black" onclick="draw_rectangle()">Rectangle</button>
+<div>
+
+<div id="content" class="w3-container"> 
+        <button class"w3-button w3-black" onclick="write_text()">FRI Stream</button>
+<div>
+
+<div id="content" class="w3-container"> 
+        <button class"w3-button w3-black" onclick="draw_image()">Smiley Face</button>
+<div>
+
+<!-- These three buttons above will be used to call upon the function that will draw a rectangle or image, or write text on the canvas. --> 
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
@@ -118,3 +106,4 @@ function eraser() {
 
 </body>
 </html>
+
