@@ -41,18 +41,18 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 function draw_rectangle() {
 	var canvas = document.getElementById("x");
-	var context = canvas.getContext("y");
+	var context = canvas.getContext("2d");
 	context.fillRect(130, 50, 50, 75); }
 	
 function write_text() {
 	var canvas_two = document.getElementById("x");
-	var context_two = canvas_two.getContext("y");
+	var context_two = canvas_two.getContext("2d");
 	context_two.font = "13px Verdana"; 
 	context_two.fillText("DIY Diagnostics", 10, 20); } 
 
 function draw_image() {
 	var canvas_three = document.getElementById("x");
-	var context_three = canvas_three.getContext("y");
+	var context_three = canvas_three.getContext("2d");
 	var smiley_face = new Image (); 
 	smiley_face.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1200px-SNice.svg.png" 
 	context_three.drawImage(smiley_face, 10, 20, 100, 100); } 
@@ -100,7 +100,7 @@ The function above draw_image will draw the image from the link I insterted unde
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 <div> 
 
-<canvas id="x" width="205" height="105" style="border:5px solid #000000;"></canvas>
+<canvas id="x" width="305" height="205" style="border:1px solid #000000;"></canvas>
 
 <div id="content" class="w3-container"> 
         <button class"w3-button w3-black" onclick="draw_rectangle()">Rectangle</button>
