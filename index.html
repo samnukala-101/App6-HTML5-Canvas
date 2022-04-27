@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Samanvitha Nukala
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The goal of this code is to understand how to display different shapes, texts, lines, and images onto a canvas on an HTML5 page. 
  
 Known Issues:
-blah, blah, blah, blah
+Inserting the image onto the page successfully was a challenge at first but I was able to figure it out after tampering with it for a while.
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -39,32 +39,27 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
-function draw_rectangle() {
+function draw_rectangle() { // this function called the draw_function draws a rectangle on the canvas with the context 2d. The values 130, 90, 50, and 75 in the context.fillRect() set the dimensions of the rectangle and will also place where the corner of the rectangle will be drawn on the canvas
 	var canvas = document.getElementById("x");
 	var context = canvas.getContext("2d");
 	context.fillRect(130, 50, 50, 75); }
 	
-function write_text() {
+function write_text() { // this function called write_text will add text to the canvas with the ID x once again from the previous rectangle. I added the context and fill text with ("DIY Diagnostics", 10, 20) which gives the x and y coordinates for where the text is going too be printed and the text being printed is "DIY Diagnostics." The 13px and Verdana also gives the font and the size of the text that's being printed.
 	var canvas_two = document.getElementById("x");
 	var context_two = canvas_two.getContext("2d");
 	context_two.font = "13px Verdana"; 
 	context_two.fillText("DIY Diagnostics", 10, 20); } 
 
-function draw_image() {
+function draw_image() { // this function called draw_image will draw the image from the link I inserted under the smiley face at the given coordinates. This image will be drawn at 200 x 200 because the original dimensions make it a square.
 	var canvas_three = document.getElementById("x");
 	var context_three = canvas_three.getContext("2d");
-	var smiley_face = new Image (); 
+	var smiley_face = new Image ();
 	smiley_face.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1200px-SNice.svg.png" 
-	context_three.drawImage(smiley_face, 10, 20, 100, 100); } 
+	context_three.drawImage(smiley_face, 10, 20, 100, 100); }
 	
-function eraser() { 
+function eraser() { // this function called the eraser will erase whatever images, pictures, or words are on the canvas. 
 	var canvas = document.getElementById("x")
-	canvas.width = canvas.width; } 
-	
-/* This function I added above is the draw_function which will draw a rectangle on the canvas. THe values (180, 90, 50, and 75) will be used to set the dimensions of the rectangle and will also place the corner of the rectangle for where it's going to be drawn on the canvas.
-This function above called write_text will add text to the canvas with the ID x once again from the previous rectangle. I added the context and fill text with ("DIY Diagnostics", 10, 20) which gives the x and y coordinates for where the text is going too be printed and the text being printed is "DIY Diagnostics." The 13px and Verdana also gives the font and the size of the text that's being printed.
-The function above draw_image will draw the image from the link I insterted under smiley face at the given coordinates. This image will be drawn at 200 x 200 because the original dimensions make it a square.
-*/
+	canvas.width = canvas.width; }
 	
 </script>
 
@@ -100,25 +95,23 @@ The function above draw_image will draw the image from the link I insterted unde
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 <div> 
 
-<canvas id="x" width="305" height="205" style="border:1px solid #000000;"></canvas>
+<canvas id="x" width="305" height="205" style="border:1px solid #000000;"></canvas> // this line of code will set up the canvas dimensions and border 
 
-<div id="content" class="w3-container"> 
-        <button class"w3-button w3-black" onclick="draw_rectangle()">Rectangle</button>
+<div id="content" class="w3-container">.4]yi	f  nk ///pxszxx/``  
+        <button class"w3-button w3-black" onclick="draw_rectangle()">Rectangle</button> // this button will place a rectangle within the canvas and will use the draw_rectangle function to do so
 <div>
 
 <div id="content" class="w3-container"> 
-        <button class"w3-button w3-black" onclick="write_text()">FRI Stream</button>
+        <button class"w3-button w3-black" onclick="write_text()">FRI Stream</button> // this button will place the words FRI Stream on the canvas and will use the write_text function to do so
 <div>
 
 <div id="content" class="w3-container"> 
-        <button class"w3-button w3-black" onclick="draw_image()">Smiley Face</button>
+        <button class"w3-button w3-black" onclick="draw_image()">Smiley Face</button> // this button will place a smiley face within the canvas and will use the draw_image function to do so
 <div>
 	
 <div id="content" class="w3-container"> 
-	<button class"w3-button w3-black" onclick="eraser()">Erase</button> 
+	<button class"w3-button w3-black" onclick="eraser()">Erase</button>  // this button will erase whatever is present on the canvas width and will use the eraser function to do so
 <div>
-
-<!-- These four buttons above will be used to call upon the function that will draw a rectangle or image, or write text on the canvas. --> 
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
